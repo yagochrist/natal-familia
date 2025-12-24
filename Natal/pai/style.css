@@ -1,0 +1,71 @@
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #0b0e11;
+  color: #e6e6e6;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid #1f2933;
+}
+
+header h1::after {
+  content: " 🙂";
+}
+
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.event {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.year {
+  min-width: 80px;
+  color: #9ca3af;
+}
+
+.content img {
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #1f2933;
+  transition: transform .25s;
+}
+
+.content img:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #9ca3af;
+}
+
+.signature {
+  margin-top: 20px;
+  opacity: .6;
+}
+
+/* mini assinatura */
+.mini-signature {
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.65em;
+  opacity: 0.35;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .event { flex-direction: column; }
+  .content img { width: 100%; }
+}
